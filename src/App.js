@@ -22,7 +22,7 @@ function App() {
 
   const fetchData = async (pageNo) => {
     if(prompt) {
-      const {data} = await axios.get(`http://api.searchspring.net/api/search/search.json?siteId=scmq7n&q=${prompt}&resultsFormat=native&page=${pageNo}`)
+      const {data} = await axios.get(`https://api.searchspring.net/api/search/search.json?siteId=scmq7n&q=${prompt}&resultsFormat=native&page=${pageNo}`)
 
       setProducts(data.results)
       setTotalPages(data.pagination.totalPages)
